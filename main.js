@@ -1,27 +1,3 @@
-document.addEventListener("keydown", function(e){//Useing Keyboard to call other function
-    if(e.keyCode === 38){//ArrowUp
-        moveup();
-    }
-    if(e.keyCode === 40){//ArrowDown
-        movedown();
-    }
-    if(e.keyCode === 39){//ArrowRight
-        moveright();
-    }
-    if(e.keyCode === 37){//ArrowLeft
-        moveleft();
-    }
-});
-
-function moveup(){
-    document.getElementById("nani").innerHTML = "up";
-}
-function movedown(){
-    document.getElementById("nani").innerHTML = "down";
-}
-function moveright(){
-    document.getElementById("nani").innerHTML = "right";
-}
-function moveleft(){
-    document.getElementById("nani").innerHTML = "left";
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5368a4b99e00a26b4cf68fa7e4226042c78d26b3efc0ca269ba8059d5570cdcb
+size 658
