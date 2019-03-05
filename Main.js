@@ -25,13 +25,13 @@ function moveright(){
 function moveleft(){
     document.getElementById("nani").innerHTML = "left";
 }
-function maze(){
+function maze(){	
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.beginPath();
+	ctx.moveTo(20, 20);
+	ctx.lineTo(20, 100);
+	ctx.lineTo(100, 70);
+	ctx.stroke();
 	
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-    ctx.beginPath();
-    ctx.moveTo(20, 20);
-    ctx.lineTo(20, 100);
-    ctx.lineTo(100, 70);
-    ctx.stroke();	
 }
