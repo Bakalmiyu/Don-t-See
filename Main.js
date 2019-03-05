@@ -26,12 +26,11 @@ function moveleft(){
     document.getElementById("nani").innerHTML = "left";
 }
 function maze(){	
-	var c = document.getElementById("myCanvas");
-	var ctx = c.getContext("2d");
-	ctx.beginPath();
-	ctx.moveTo(20, 20);
-	ctx.lineTo(20, 100);
-	ctx.lineTo(100, 70);
-	ctx.stroke();
-	
+	var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(0,0,150,75);
+}
+function main(){
+    maze();
 }
