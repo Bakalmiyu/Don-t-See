@@ -28,11 +28,19 @@ function moveleft(){
 function maze(){	
 	var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
+<<<<<<< HEAD
     ctx.canvas.width = window.innerWidth;
     ctx.fillStyle = "#FF0000";
     ctx.canvas.height = window.innerHeight;
+=======
+    ctx.fillStyle = "#FF0000";
+>>>>>>> dc54940b3598ff304ccf6943c6983c0e69a1973b
     ctx.fillRect(0,0,150,75);
 }
 function main(){
     maze();
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> dc54940b3598ff304ccf6943c6983c0e69a1973b
