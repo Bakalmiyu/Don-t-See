@@ -25,3 +25,14 @@ function moveright(){
 function moveleft(){
     document.getElementById("nani").innerHTML = "left";
 }
+function maze(){	
+	var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.canvas.width = window.innerWidth;
+    ctx.fillStyle = "#FF0000";
+    ctx.canvas.height = window.innerHeight;
+    ctx.fillRect(0,0,150,75);
+}
+function main(){
+    maze();
+}
