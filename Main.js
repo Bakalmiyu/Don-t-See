@@ -13,8 +13,7 @@ document.addEventListener("keydown", function(e){//Useing Keyboard to call other
     }
 });
 
-function moveup(){
-    document.getElementById
+
 
 }
 function movedown(){
