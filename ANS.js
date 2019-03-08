@@ -35,10 +35,8 @@ function soundLevel(event) {
 
 function isCollide(posX, posY, maze = mazefile) {
 	if (maze[posX, posY] == '#FF0000'){
-		return True
+		return True;
 	}
 	//FIXME: add a more general approach to include character?
-	return False
+	return False;
 }
-
-mazefile = seed()
