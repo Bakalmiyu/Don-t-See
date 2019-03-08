@@ -15,6 +15,7 @@ document.addEventListener("keydown", function(e){//Useing Keyboard to call other
 
 function moveup(){
     document.getElementById
+
 }
 function movedown(){
 }
@@ -59,3 +60,4 @@ function maze(){
 function main(){
     maze();
 }
+
