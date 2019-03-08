@@ -4,11 +4,12 @@ const originalDistance = 5;
 const originalSoundLevel = 100;
 //support functions
 function rgbToHex(colors) {
-	// body...
 	return (colors[0] << 16 | colors[1] << 8 | colors[2]).toString(16);
 
 }
 
+
+//real function
 function seed() {
 	//FIXME: load in the maze map
 	maze = document.getElementById('myCanvas');
@@ -22,6 +23,7 @@ function seed() {
 			mazefile[x, y] = '#' + Hex;
 		}
 	}
+	return mazefile
 }
 
 function soundLevel(event) {
@@ -32,15 +34,11 @@ function soundLevel(event) {
 }
 
 function isCollide(posX, posY, maze = mazefile) {
-	for (x = 0, x > mazefile.length, x++){
-		if (posX = mazefile[x]) {
-			for (var y = 0; y < mazefile[x].length; y++) {
-				if (mazefile[x][y] == posY) {
-					return True;
-				}
-			}
-		}
+	if (maze[posX, posY] == '#FF0000'){
+		return True
 	}
 	//FIXME: add a more general approach to include character?
 	return False
 }
+
+mazefile = seed()
