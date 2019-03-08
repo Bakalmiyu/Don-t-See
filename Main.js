@@ -30,7 +30,7 @@ function maze(){
 	ctx.beginPath();
 	
 	ctx.moveTo(1/4*window.innerWidth,1/4*window.innerHeight-150);//first line
-	ctx.lineTo(3/4*window.innerWidth,1/4*window.innerHeight-150);
+	ctx.lineTo(window.innerWidth,1/4*window.innerHeight-150);
 	
 	ctx.moveTo(1/4*window.innerWidth,2/4*window.innerHeight-150);//2nd horizaonral
 	ctx.lineTo(1/2*window.innerWidth,2/4*window.innerHeight-150);
@@ -46,7 +46,9 @@ function maze(){
 	
 	ctx.moveTo(5/8*window.innerWidth,2/4*window.innerHeight-150);//3rd line
 	ctx.lineTo(5/8*window.innerWidth,window.innerHeight-150);
-	ctx.stroke();
+    ctx.font = "30px Arial";
+    ctx.fillText("Enter",1/2*window.innerWidth+50,innerHeight-170); ctx.fillText("End",7/8*window.innerWidth+50,1/4*window.innerHeight+100)
+	ctx.stroke(); 
 	
 }
 
