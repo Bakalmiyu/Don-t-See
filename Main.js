@@ -12,16 +12,16 @@ document.addEventListener("keydown", function(e){//Useing Keyboard to call other
         moveleft();
     }
 });
-
 function moveup(){
-    document.getElementById
-
+    document.getElementById("1").style.top + "100px";
 }
-function movedown(){
+function movedown(){  document.getElementById("1").style.top + "100px";
 }
 function moveright(){
+    document.getElementById("1").style.left - "100px";
 }
 function moveleft(){
+    document.getElementById("1").style.left + "100px";
 }
 function maze(){	
 	var canvas = document.getElementById("myCanvas");
