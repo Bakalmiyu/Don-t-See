@@ -5,7 +5,6 @@ const originalSoundLevel = 100;
 //support functions
 function rgbToHex(colors) {
 	return (colors[0] << 16 | colors[1] << 8 | colors[2]).toString(16);
-
 }
 
 
@@ -16,7 +15,7 @@ function seed() {
 	ctx = maze.getContext('2d');
 	mazefile = [];
 	for (var x = 0; x < maze.width; x++) {
-		mazefile[x] = []
+		mazefile[x] = [];
 		for (var y = 0; y < maze.height; y++) {
 			colorCode = ctx.getImageData(x,y,1,1).data;
 			Hex = rgbToHex(colorCode);
