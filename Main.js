@@ -35,6 +35,7 @@ function moveup(){
     maze();
     drawpic(x,y-10);
     y = y-10;
+    isCollide(x, y)
 }
 function movedown(){ 
     del();
