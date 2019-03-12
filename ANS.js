@@ -31,8 +31,8 @@ function soundLevel(event) {
 
 function isCollide(posX, posY, maze = mazefile) {
 	if (maze[posX, posY] == '#FF0000'){
-		var collision = new Audio() //Add collision sound here
-		collision.play()
+		var collision = new Audio('welcome.mp3'); //Add collision sound here
+		collision.play();
 		return True;
 	}
 	return False;
