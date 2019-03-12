@@ -91,6 +91,7 @@ function audio(){
     var forest = new Audio('forest.mp3');
     forest.loop = true;
     forest.play();
+    document.getElementById("background").loop = true;
 }
 
 function main(){//when don't see load use this
