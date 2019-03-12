@@ -6,24 +6,28 @@ document.addEventListener("keydown", function(e){//Useing Keyboard to call other
         del()
         maze()
         drawpic(x,y-10)
+        y = y-10
     }
     if(e.keyCode === 40){//ArrowDown
         movedown();
         del()
         maze()
         drawpic(x,y+10)
+        y = y+10
     }
     if(e.keyCode === 39){//ArrowRight
         moveright();
         del()
         maze()
         drawpic(x+10,y)
+        x+=10 
     }
     if(e.keyCode === 37){//ArrowLeft
         moveleft();
         del()
         maze()
         drawpic(x-10,y)
+        x-=10
     }
 });
 function drawpic(x,y){
