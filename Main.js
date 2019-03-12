@@ -29,13 +29,13 @@ function del(){
     var canvas = document.getElementById("myCanvas");
     ctx.clearRect(0,0,canvas.width,canvas.height)
 }
-
+var mazefile = seed()
 function moveup(){
     del();
     maze();
     drawpic(x,y-10);
     y = y-10;
-    isCollide(x, y)
+    isCollide(x, y,mazefile)
 }
 function movedown(){ 
     del();
@@ -82,17 +82,16 @@ function maze(){
     ctx.moveTo(5/8*window.innerWidth,2/4*window.innerHeight-150);//3rd line
     ctx.lineTo(5/8*window.innerWidth,window.innerHeight-130);
 
-    ctx.moveTo(4/8*window.innerWidth,window.innerHeight-130)
-    ctx.lineTo(5/8*window.innerWidth,window.innerHeight-130)
+    ctx.moveTo(4/8*window.innerWidth,window.innerHeight-130);
+    ctx.lineTo(5/8*window.innerWidth,window.innerHeight-130);
     ctx.font = "30px Arial";//text
-    ctx.fillText("Enter",3.5/8*window.innerWidth,innerHeight-170); ctx.fillText("End",7/8*window.innerWidth+50,1/4*window.innerHeight+100)
+    ctx.fillText("Enter",3.5/8*window.innerWidth,innerHeight-170); ctx.fillText("End",7/8*window.innerWidth+50,1/4*window.innerHeight+100);
     ctx.stroke(); 
 }
 function audio(){
     var forest = new Audio('forest.mp3');
     forest.loop = true;
     forest.play();
-    document.getElementById("background").loop = true;
 }
 
 function main(){//when don't see load use this
