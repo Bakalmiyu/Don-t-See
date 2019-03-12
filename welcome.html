@@ -4,8 +4,10 @@
 </head>
 
 <body>
-    <div id="music"><embed src="welcome.mp3" autostart=true loop=false></div>
-
+    <script>
+        var welcome = new Audio('welcome.mp3')
+        welcome.play()
+    </script>
     <div class="form">
         <label for="usr">Name:</label>
         <input type="text" class="form-control" id="textbox" autofocus>
