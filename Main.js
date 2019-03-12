@@ -89,8 +89,7 @@ function maze(){
 }
 function audio(){
     document.getElementById("background").loop = true;
-    audio = new Audio ("forest.map3")
-    audio.play()
+   
 }
 
 function main(){//when don't see load use this
