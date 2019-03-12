@@ -87,12 +87,12 @@ function maze(){
 }
 function audio(){
 	var x = document.getElementById("background").loop;
-
+	document.getElementById("Try").innterHTML = x;
 }
 
 function main(){//when don't see load use this
     maze();
     drawpic(x,y)
-	audio()
+	audio();
 }
 
