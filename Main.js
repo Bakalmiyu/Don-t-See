@@ -29,34 +29,40 @@ function del(){
     var canvas = document.getElementById("myCanvas");
     ctx.clearRect(0,0,canvas.width,canvas.height)
 }
-var mazefile = seed()
 function moveup(){
+    collide();
     del();
     maze();
     drawpic(x,y-10);
     y = y-10;
-    isCollide(x, y,mazefile)
 }
 function movedown(){ 
+    collide();
     del();
     maze();
     drawpic(x,y+10);
     y = y+10;
 }
 function moveright(){
+    collide();
     del();
     maze();
     drawpic(x+10,y);
     x+=10;
 }
 function moveleft(){
+    collide();
     del();
     maze();
     drawpic(x-10,y);
     x-=10;
 }
-
-
+function collide(){
+        if ((1/4*window.innerWidth <= x <= window.innerWidth) && y == 1/4*window.innerHeight-150){
+            x = x;
+            y = 1/4*window.innerHeight-150;
+        }
+}
 function maze(){	
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
@@ -86,7 +92,7 @@ function maze(){
     ctx.lineTo(5/8*window.innerWidth,window.innerHeight-130);
     ctx.font = "30px Arial";//text
     ctx.fillText("Enter",3.5/8*window.innerWidth,innerHeight-170); ctx.fillText("End",7/8*window.innerWidth+50,1/4*window.innerHeight+100);
-    ctx.stroke(); 
+    ctx.stroke();
 }
 function audio(){
     var forest = new Audio('forest.mp3');
