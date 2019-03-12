@@ -29,7 +29,7 @@ function del(){
     var canvas = document.getElementById("myCanvas");
     ctx.clearRect(0,0,canvas.width,canvas.height)
 }
-var mazefile = seed()
+//var mazefile = seed()
 function moveup(){
     del();
     maze();
