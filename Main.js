@@ -31,28 +31,28 @@ function del(){
 }
 
 function moveup(){
-    del()
-    maze()
-    drawpic(x,y-10)
-    y = y-10
+    del();
+    maze();
+    drawpic(x,y-10);
+    y = y-10;
 }
 function movedown(){ 
-    del()
-    maze()
-    drawpic(x,y+10)
-    y = y+10
+    del();
+    maze();
+    drawpic(x,y+10);
+    y = y+10;
 }
 function moveright(){
-    del()
-    maze()
-    drawpic(x+10,y)
-    x+=10 
+    del();
+    maze();
+    drawpic(x+10,y);
+    x+=10;
 }
 function moveleft(){
-    del()
-    maze()
-    drawpic(x-10,y)
-    x-=10
+    del();
+    maze();
+    drawpic(x-10,y);
+    x-=10;
 }
 
 
@@ -88,7 +88,9 @@ function maze(){
     ctx.stroke(); 
 }
 function audio(){
-    document.getElementById("background").loop;
+    var forest = new Audio('forest.mp3');
+    forest.loop = true;
+    forest.play();
 }
 
 function main(){//when don't see load use this
