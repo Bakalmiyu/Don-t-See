@@ -96,7 +96,7 @@ function audio(){
 
 function main(){//when don't see load use this
     maze();
-    drawpic(x,y)
+    drawpic(x,y);
     audio();
 }
 
