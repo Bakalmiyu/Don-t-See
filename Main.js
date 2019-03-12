@@ -88,7 +88,7 @@ function maze(){
     ctx.stroke(); 
 }
 function audio(){
-    document.getElementById("background").loop;
+    document.getElementById("background").loop = true;
 }
 
 function main(){//when don't see load use this
