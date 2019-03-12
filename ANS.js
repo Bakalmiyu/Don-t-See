@@ -8,8 +8,8 @@ function rgbToHex(colors) {
 
 //real function
 function seed() {
-	maze = document.getElementById('myCanvas');
-	ctx = maze.getContext('2d');
+	var maze = document.getElementById('myCanvas');
+	var ctx = maze.getContext('2d');
 	mazefile = [];
 	for (var x = 0; x < maze.width; x++) {
 		mazefile[x] = [];
@@ -30,7 +30,9 @@ function soundLevel(event) {
 }
 
 function isCollide(posX, posY, maze = mazefile) {
-	if (maze[posX, posY] == '#FF0000'){
+	posXInted = Math.ceil(posX);
+	posYInted = Math.ceil(posY);
+	if (maze[posXInted, posYInted] == '#000000'){
 		var collision = new Audio('welcome.mp3'); //Add collision sound here
 		collision.play();
 		return True;
