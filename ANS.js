@@ -10,7 +10,6 @@ function rgbToHex(colors) {
 
 //real function
 function seed() {
-	//FIXME: load in the maze map
 	maze = document.getElementById('myCanvas');
 	ctx = maze.getContext('2d');
 	mazefile = [];
@@ -34,8 +33,9 @@ function soundLevel(event) {
 
 function isCollide(posX, posY, maze = mazefile) {
 	if (maze[posX, posY] == '#FF0000'){
+		var collision = new Audio() //Add collision sound here
+		collision.play()
 		return True;
 	}
-	//FIXME: add a more general approach to include character?
 	return False;
 }
