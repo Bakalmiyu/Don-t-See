@@ -86,7 +86,7 @@ function maze(){
 	ctx.stroke(); 
 }
 
-function main(){
+function main(){//when don't see load use this
     maze();
     drawpic(x,y)
 }

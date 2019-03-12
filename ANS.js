@@ -1,5 +1,3 @@
-
-
 const originalDistance = 5;
 const originalSoundLevel = 100;
 //support functions
