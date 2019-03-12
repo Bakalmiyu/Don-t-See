@@ -1,40 +1,62 @@
+x = 4.28/8*window.innerWidth
+y = window.innerHeight*2.8/4
 document.addEventListener("keydown", function(e){//Useing Keyboard to call other function
     if(e.keyCode === 38){//ArrowUp
-        moveup();
+        moveup()
+        del()
+        maze()
+        drawpic(x,y-10)
     }
     if(e.keyCode === 40){//ArrowDown
         movedown();
+        del()
+        maze()
+        drawpic(x,y+10)
     }
     if(e.keyCode === 39){//ArrowRight
         moveright();
+        del()
+        maze()
+        drawpic(x+10,y)
     }
     if(e.keyCode === 37){//ArrowLeft
         moveleft();
+        del()
+        maze()
+        drawpic(x-10,y)
     }
 });
-function moveup(){
-    document.getElementById("1").style.top + "100px";
-
-
-
-
+function drawpic(x,y){
+    var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = new Image()
+    img.src = "Black-dot-1.png"
+    ctx.drawImage(img,x,y);
 }
-function movedown(){  document.getElementById("1").style.top + "100px";
+function del(){
+    var ctx = document.getElementById("myCanvas").getContext("2d")
+    var canvas = document.getElementById("myCanvas");
+    ctx.clearRect(0,0,canvas.width,canvas.height)
+}
+
+function moveup(){
+    
+}
+function movedown(){  
 }
 function moveright(){
-    document.getElementById("1").style.left - "100px";
 }
 function moveleft(){
-    document.getElementById("1").style.left + "100px";
 }
+
+
 function maze(){	
-	var canvas = document.getElementById("myCanvas");
+    var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
     ctx.canvas.width = window.innerWidth;
 	ctx.canvas.height = window.innerHeight;
 	ctx.fillStyle = "#FF0000";   
 	ctx.beginPath();
-	
 	ctx.moveTo(1/4*window.innerWidth,1/4*window.innerHeight-150);//first line
 	ctx.lineTo(window.innerWidth,1/4*window.innerHeight-150);
 	
@@ -56,12 +78,12 @@ function maze(){
     ctx.moveTo(4/8*window.innerWidth,window.innerHeight-130)
     ctx.lineTo(5/8*window.innerWidth,window.innerHeight-130)
     ctx.font = "30px Arial";//text
-    ctx.fillText("Enter",3.5/8*window.innerWidth,innerHeight-170); ctx.fillText("End",7/8*window.innerWidth+50,1/4*window.innerHeight+100)
+ ctx.fillText("Enter",3.5/8*window.innerWidth,innerHeight-170); ctx.fillText("End",7/8*window.innerWidth+50,1/4*window.innerHeight+100)
 	ctx.stroke(); 
-	
 }
 
 function main(){
     maze();
+    drawpic(x,y)
 }
 
