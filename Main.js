@@ -85,9 +85,14 @@ function maze(){
  ctx.fillText("Enter",3.5/8*window.innerWidth,innerHeight-170); ctx.fillText("End",7/8*window.innerWidth+50,1/4*window.innerHeight+100)
 	ctx.stroke(); 
 }
+function audio(){
+	var x = document.getElementById("background").loop;
+
+}
 
 function main(){//when don't see load use this
     maze();
     drawpic(x,y)
+	audio()
 }
 
