@@ -1,7 +1,7 @@
 x = 4.28/8*window.innerWidth
 y = window.innerHeight*2.8/4
-var collision = new Audio('impact.wav')
-var footstep = new Audio('zapsplat_foley_footstep_single_trainer_wood_floor_gentle_soft_003_27762.mp3')
+var collision = new Audio('impact.wav');
+var footstep = new Audio('zapsplat_foley_footstep_single_trainer_wood_floor_gentle_soft_003_27762.mp3');
 document.addEventListener("keydown", function(e){//Useing Keyboard to call other function
     if(e.keyCode === 38){//ArrowUp
         footstep.play();
@@ -36,17 +36,15 @@ function del(){
     var canvas = document.getElementById("myCanvas");
     ctx.clearRect(0,0,canvas.width,canvas.height)
 }
-//var mazefile = seed()
 function moveup(){
     if((y-10)<37.799999999999955)
     {collision.play();}
     else{
-    del();
-    maze();
-    drawpic(x,y-10);
-    y = y-10;
-    isCollide(x, y,mazefile)
-}
+        del();
+        maze();
+        drawpic(x,y-10);
+        y = y-10;
+    }
 }
 function movedown(){ 
     if((y+10)>537.8)
@@ -58,24 +56,24 @@ function movedown(){
         collision.play(); 
     }
     else{
-    del();
-    maze();
-    drawpic(x,y+10);
-    y = y+10;}
-    
+        del();
+        maze();
+        drawpic(x,y+10);
+        y = y+10;}
+
 }
 function moveright(){
-     if(((x+10)>861.76 &&(y>=147.799999999999955 && y<=537.8 ))){
+    if(((x+10)>861.76 &&(y>=147.799999999999955 && y<=537.8 ))){
         collision.play(); 
     }
     else if(((x+10)>1431.76 &&(y>=37.799999999999955 && y<=137.799999999999955 ))){
         alert("You Won"); 
     }
     else{
-    del();
-    maze();
-    drawpic(x+10,y);
-    x+=10;}
+        del();
+        maze();
+        drawpic(x+10,y);
+        x+=10;}
 }
 function moveleft(){
     if((x-10)<381.76 &&(y>=37.799999999999955 && y<=137.799999999999955 ))
@@ -84,12 +82,13 @@ function moveleft(){
         collision.play(); 
     }
     else{
-    del();
-    maze();
-    drawpic(x-10,y);
-    x-=10;
+        del();
+        maze();
+        drawpic(x-10,y);
+        x-=10;
 
-
+    }
+}
 function maze(){	
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
