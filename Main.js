@@ -31,12 +31,12 @@ function del(){
 }
 //var mazefile = seed()
 function moveup(){
-    if (false){
+    
     	del();
     	maze();
     	drawpic(x,y-10);
     	y = y-10;
-    }
+    
 }
 function movedown(){ 
     del();
