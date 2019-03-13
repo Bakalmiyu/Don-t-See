@@ -2,17 +2,21 @@ x = 4.28/8*window.innerWidth
 y = window.innerHeight*2.8/4
 document.addEventListener("keydown", function(e){//Useing Keyboard to call other function
     if(e.keyCode === 38){//ArrowUp
-        moveup()
+        collide();
+        moveup();
     }
     if(e.keyCode === 40){//ArrowDown
+        collide();
         movedown();
 
     }
     if(e.keyCode === 39){//ArrowRight
+        collide();
         moveright();
 
     }
     if(e.keyCode === 37){//ArrowLeft
+        collide();
         moveleft();
 
     }
@@ -29,29 +33,27 @@ function del(){
     var canvas = document.getElementById("myCanvas");
     ctx.clearRect(0,0,canvas.width,canvas.height)
 }
+//var mazefile = seed()
 function moveup(){
-    collide();
     del();
     maze();
     drawpic(x,y-10);
     y = y-10;
+    collide();
 }
 function movedown(){ 
-    collide();
     del();
     maze();
     drawpic(x,y+10);
     y = y+10;
 }
 function moveright(){
-    collide();
     del();
     maze();
     drawpic(x+10,y);
     x+=10;
 }
 function moveleft(){
-    collide();
     del();
     maze();
     drawpic(x-10,y);
