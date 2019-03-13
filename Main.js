@@ -31,11 +31,12 @@ function del(){
 }
 //var mazefile = seed()
 function moveup(){
-    del();
-    maze();
-    drawpic(x,y-10);
-    y = y-10;
-    isCollide(x, y,mazefile)
+    if (false){
+    	del();
+    	maze();
+    	drawpic(x,y-10);
+    	y = y-10;
+    }
 }
 function movedown(){ 
     del();
@@ -63,6 +64,7 @@ function maze(){
     ctx.canvas.width = window.innerWidth;
     ctx.canvas.height = window.innerHeight;
     ctx.fillStyle = "#FF0000";   
+    ctx.strokeStyle = "#000000";
     ctx.beginPath();
     ctx.moveTo(1/4*window.innerWidth,1/4*window.innerHeight-150);//first line
     ctx.lineTo(window.innerWidth,1/4*window.innerHeight-150);
