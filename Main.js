@@ -1,5 +1,6 @@
 x = 4.28/8*window.innerWidth
 y = window.innerHeight*2.8/4
+var collision = new Audio('impact.wav')
 document.addEventListener("keydown", function(e){//Useing Keyboard to call other function
     if(e.keyCode === 38){//ArrowUp
         moveup()
