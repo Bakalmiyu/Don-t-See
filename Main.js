@@ -60,7 +60,7 @@ function moveleft(){
 }
 function collide(){
     drawpic(1/2*window.innerWidth,1/4*window.innerHeight-150)
-    if(y == 2/4*window.innerHeight-150 && x >= 1/4*window.innerHeight && x <= 1/2*window.innerHeight){
+    if(y == 2/4*window.innerHeight && x >= 1/4*window.innerHeight && x <= 1/2*window.innerHeight){
         moveup();
     }
     if(1/4*window.innerHeight-150 > y){//1st horizaontal
