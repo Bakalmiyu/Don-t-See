@@ -35,7 +35,7 @@ function isCollide(posX, posY, maze = mazefile) {
 	if (maze[posXInted, posYInted] == '#000000'){
 		var collision = new Audio('welcome.mp3'); //Add collision sound here
 		collision.play();
-		return True;
+		return true;
 	}
-	return False;
+	return false;
 }
