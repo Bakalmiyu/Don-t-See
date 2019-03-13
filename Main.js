@@ -35,7 +35,7 @@ function moveup(){
     del();
     maze();
     if((y-10)<37.799999999999955)
-    {alert("NO!!");}
+    {collision.play();}
     else{
     drawpic(x,y-10);
     y = y-10;
@@ -46,12 +46,12 @@ function movedown(){
     del();
     maze();
     if((y+10)>537.8)
-    {alert("NO!!");}
+    {collision.play();}
     else if((y+10)>137.799999999999955&&(x>=381.76&&x<=761.76)){
-        alert("NO!!"); 
+        collision.play(); 
     }
     else if((y+10)>137.799999999999955&&(x>=871.76&&x<=1431.76)){
-        alert("NO!!"); 
+        collision.play(); 
     }
     else{
    
@@ -63,7 +63,7 @@ function moveright(){
     del();
     maze();
      if(((x+10)>861.76 &&(y>=147.799999999999955 && y<=537.8 ))){
-        alert("NO!!"); 
+        collision.play(); 
     }
     else if(((x+10)>1431.76 &&(y>=37.799999999999955 && y<=137.799999999999955 ))){
         alert("You Won"); 
@@ -76,9 +76,9 @@ function moveleft(){
     del();
     maze();
     if((x-10)<381.76 &&(y>=37.799999999999955 && y<=137.799999999999955 ))
-    {alert("NO!!");}
+    {collision.play();}
     else if(((x-10)<771.76 &&(y>=147.799999999999955 && y<=537.8 ))){
-        alert("NO!!"); 
+        collision.play(); 
     }
     else{
     drawpic(x-10,y);
