@@ -2,26 +2,23 @@ x = 4.28/8*window.innerWidth
 y = window.innerHeight*2.8/4
 document.addEventListener("keydown", function(e){//Useing Keyboard to call other function
     if(e.keyCode === 38){//ArrowUp
-        collide();
-        moveup();
+        moveup()
     }
     if(e.keyCode === 40){//ArrowDown
-        collide();
         movedown();
 
     }
     if(e.keyCode === 39){//ArrowRight
-        collide();
         moveright();
 
     }
     if(e.keyCode === 37){//ArrowLeft
-        collide();
         moveleft();
 
     }
 });
 function drawpic(x,y){
+    console.log("X=",x,"Y=",y);
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
     var img = new Image()
@@ -37,50 +34,63 @@ function del(){
 function moveup(){
     del();
     maze();
+    if((y-10)<37.799999999999955)
+    {alert("NO!!");}
+    else{
     drawpic(x,y-10);
     y = y-10;
+    isCollide(x, y,mazefile)
+}
 }
 function movedown(){ 
     del();
     maze();
+    if((y+10)>537.8)
+    {alert("NO!!");}
+    else if((y+10)>137.799999999999955&&(x>=381.76&&x<=761.76)){
+        alert("NO!!"); 
+    }
+    else if((y-10)>137.799999999999955&&(x>=871.76&&x<=1431.76)){
+        alert("NO!!"); 
+    }
+    else{
+   
     drawpic(x,y+10);
-    y = y+10;
+    y = y+10;}
+    
 }
 function moveright(){
     del();
     maze();
+     if(((x+10)>861.76 &&(y>=147.799999999999955 && y<=537.8 ))){
+        alert("NO!!"); 
+    }
+    else if(((x+10)>1431.76 &&(y>=37.799999999999955 && y<=137.799999999999955 ))){
+        alert("You Won"); 
+    }
+    else{
     drawpic(x+10,y);
-    x+=10;
+    x+=10;}
 }
 function moveleft(){
     del();
     maze();
+    if((x-10)<381.76 &&(y>=37.799999999999955 && y<=137.799999999999955 ))
+    {alert("NO!!");}
+    else if(((x-10)<771.76 &&(y>=147.799999999999955 && y<=537.8 ))){
+        alert("NO!!"); 
+    }
+    else{
     drawpic(x-10,y);
     x-=10;
-}
-function collide(){
-    drawpic(1/2*window.innerWidth,1/4*window.innerHeight-150)
-    if(y == 2/4*window.innerHeight && x >= 1/4*window.innerHeight && x <= 1/2*window.innerHeight){
-        moveup();
-    }
-    if(1/4*window.innerHeight-150 > y){//1st horizaontal
-        movedown();
-    }
-    if(window.innerHeight-220 < y){//2nd
-        moveup();
-    }
-    if(1/4*window.innerWidth > x){//1st line down from left
-        moveright();
-    }
 
-}
-function maze(){
+
+function maze(){	
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
     ctx.canvas.width = window.innerWidth;
     ctx.canvas.height = window.innerHeight;
     ctx.fillStyle = "#FF0000";   
-    ctx.strokeStyle = "#000000";
     ctx.beginPath();
     ctx.moveTo(1/4*window.innerWidth,1/4*window.innerHeight-150);//first line
     ctx.lineTo(window.innerWidth,1/4*window.innerHeight-150);
@@ -104,7 +114,7 @@ function maze(){
     ctx.lineTo(5/8*window.innerWidth,window.innerHeight-130);
     ctx.font = "30px Arial";//text
     ctx.fillText("Enter",3.5/8*window.innerWidth,innerHeight-170); ctx.fillText("End",7/8*window.innerWidth+50,1/4*window.innerHeight+100);
-    ctx.stroke();
+    ctx.stroke(); 
 }
 function audio(){
     var forest = new Audio('forest.mp3');
