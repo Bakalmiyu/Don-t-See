@@ -33,19 +33,17 @@ function del(){
 }
 //var mazefile = seed()
 function moveup(){
-    del();
-    maze();
     if((y-10)<37.799999999999955)
     {collision.play();}
     else{
+    del();
+    maze();
     drawpic(x,y-10);
     y = y-10;
     isCollide(x, y,mazefile)
 }
 }
 function movedown(){ 
-    del();
-    maze();
     if((y+10)>537.8)
     {collision.play();}
     else if((y+10)>137.799999999999955&&(x>=381.76&&x<=761.76)){
@@ -55,14 +53,13 @@ function movedown(){
         collision.play(); 
     }
     else{
-   
+    del();
+    maze();
     drawpic(x,y+10);
     y = y+10;}
     
 }
 function moveright(){
-    del();
-    maze();
      if(((x+10)>861.76 &&(y>=147.799999999999955 && y<=537.8 ))){
         collision.play(); 
     }
@@ -70,18 +67,20 @@ function moveright(){
         alert("You Won"); 
     }
     else{
+    del();
+    maze();
     drawpic(x+10,y);
     x+=10;}
 }
 function moveleft(){
-    del();
-    maze();
     if((x-10)<381.76 &&(y>=37.799999999999955 && y<=137.799999999999955 ))
     {collision.play();}
     else if(((x-10)<771.76 &&(y>=147.799999999999955 && y<=537.8 ))){
         collision.play(); 
     }
     else{
+    del();
+    maze();
     drawpic(x-10,y);
     x-=10;
     }
