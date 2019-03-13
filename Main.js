@@ -60,12 +60,22 @@ function moveleft(){
     x-=10;
 }
 function collide(){
-        if ((1/4*window.innerWidth <= x <= window.innerWidth) && y == 1/4*window.innerHeight-150){
-            x = x;
-            y = 1/4*window.innerHeight-150;
-        }
+    drawpic(1/2*window.innerWidth,1/4*window.innerHeight-150)
+    if(y == 2/4*window.innerHeight-150 && x >= 1/4*window.innerHeight && x <= 1/2*window.innerHeight){
+        moveup();
+    }
+    if(1/4*window.innerHeight-150 > y){//1st horizaontal
+        movedown();
+    }
+    if(window.innerHeight-220 < y){//2nd
+        moveup();
+    }
+    if(1/4*window.innerWidth > x){//1st line down from left
+        moveright();
+    }
+
 }
-function maze(){	
+function maze(){
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
     ctx.canvas.width = window.innerWidth;
