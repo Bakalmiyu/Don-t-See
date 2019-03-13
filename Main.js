@@ -1,7 +1,7 @@
 x = 4.28/8*window.innerWidth
 y = window.innerHeight*2.8/4
 var collision = new Audio('impact.wav')
-var footstep = new Audio('')
+var footstep = new Audio('zapsplat_foley_footstep_single_trainer_wood_floor_gentle_soft_003_27762.mp3')
 document.addEventListener("keydown", function(e){//Useing Keyboard to call other function
     if(e.keyCode === 38){//ArrowUp
         footstep.play();
