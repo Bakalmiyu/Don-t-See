@@ -1,19 +1,24 @@
 x = 4.28/8*window.innerWidth
 y = window.innerHeight*2.8/4
 var collision = new Audio('impact.wav')
+var footstep = new Audio('')
 document.addEventListener("keydown", function(e){//Useing Keyboard to call other function
     if(e.keyCode === 38){//ArrowUp
-        moveup()
+        footstep.play();
+        moveup();
     }
     if(e.keyCode === 40){//ArrowDown
+        footstep.play();
         movedown();
 
     }
     if(e.keyCode === 39){//ArrowRight
+        footstep.play();
         moveright();
 
     }
     if(e.keyCode === 37){//ArrowLeft
+        footstep.play();
         moveleft();
 
     }
