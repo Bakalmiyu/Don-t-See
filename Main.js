@@ -18,6 +18,7 @@ document.addEventListener("keydown", function(e){//Useing Keyboard to call other
     }
 });
 function drawpic(x,y){
+    console.log("X=",x,"Y=",y);
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
     var img = new Image()
@@ -33,27 +34,57 @@ function del(){
 function moveup(){
     del();
     maze();
+    if((y-10)<37.799999999999955)
+    {alert("NO!!");}
+    else{
     drawpic(x,y-10);
     y = y-10;
     isCollide(x, y,mazefile)
 }
+}
 function movedown(){ 
     del();
     maze();
+    if((y+10)>537.8)
+    {alert("NO!!");}
+    else if((y+10)>137.799999999999955&&(x>=381.76&&x<=761.76)){
+        alert("NO!!"); 
+    }
+    else if((y-10)>137.799999999999955&&(x>=871.76&&x<=1431.76)){
+        alert("NO!!"); 
+    }
+    else{
+   
     drawpic(x,y+10);
-    y = y+10;
+    y = y+10;}
+    
 }
 function moveright(){
     del();
     maze();
+     if(((x+10)>861.76 &&(y>=147.799999999999955 && y<=537.8 ))){
+        alert("NO!!"); 
+    }
+    else if(((x+10)>1431.76 &&(y>=37.799999999999955 && y<=137.799999999999955 ))){
+        alert("You Won"); 
+    }
+    else{
     drawpic(x+10,y);
-    x+=10;
+    x+=10;}
 }
 function moveleft(){
     del();
     maze();
+    if((x-10)<381.76 &&(y>=37.799999999999955 && y<=137.799999999999955 ))
+    {alert("NO!!");}
+    else if(((x-10)<771.76 &&(y>=147.799999999999955 && y<=537.8 ))){
+        alert("NO!!"); 
+    }
+    else{
     drawpic(x-10,y);
     x-=10;
+    }
+    
 }
 
 
