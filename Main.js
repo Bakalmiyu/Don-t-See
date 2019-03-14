@@ -1,7 +1,7 @@
 x = 4.28/8*window.innerWidth
 y = window.innerHeight*2.8/4
 var collision = new Audio('impact.wav');
-var footstep = new Audio('zapsplat_foley_footstep_single_trainer_wood_floor_gentle_soft_003_27762.mp3');
+var footstep = new Audio('forestwalk.wav');
 document.addEventListener("keydown", function(e){//Useing Keyboard to call other function
     if(e.keyCode === 38){//ArrowUp
         footstep.play();
@@ -42,50 +42,51 @@ function moveup(){
     else{
         del();
         maze();
-        drawpic(x,y-10);
-        y = y-10;
+        drawpic(x,y-8);
+        y = y-8;
     }
 }
 function movedown(){ 
-    if((y+10)>537.8)
+    if((y+8)>537.8)
     {collision.play();}
-    else if((y+10)>137.799999999999955&&(x>=381.76&&x<=761.76)){
+    else if((y+8)>137.799999999999955&&(x>=381.76&&x<=761.76)){
         collision.play(); 
     }
-    else if((y+10)>137.799999999999955&&(x>=871.76&&x<=1431.76)){
+    else if((y+8)>137.799999999999955&&(x>=871.76&&x<=1431.76)){
         collision.play(); 
     }
     else{
         del();
         maze();
-        drawpic(x,y+10);
-        y = y+10;}
+        drawpic(x,y+8);
+        y = y+8;}
 
 }
 function moveright(){
-    if(((x+10)>861.76 &&(y>=147.799999999999955 && y<=537.8 ))){
+    if(((x+8)>861.76 &&(y>=147.799999999999955 && y<=537.8 ))){
         collision.play(); 
     }
-    else if(((x+10)>1431.76 &&(y>=37.799999999999955 && y<=137.799999999999955 ))){
-        alert("You Won"); 
+    else if(((x+8)>1431.76 &&(y>=37.799999999999955 && y<=137.799999999999955 ))){
+        alert("You Won. Play Again?"); 
+        location.reload();
     }
     else{
         del();
         maze();
-        drawpic(x+10,y);
-        x+=10;}
+        drawpic(x+8,y);
+        x+=8;}
 }
 function moveleft(){
-    if((x-10)<381.76 &&(y>=37.799999999999955 && y<=137.799999999999955 ))
+    if((x-8)<381.76 &&(y>=37.799999999999955 && y<=137.799999999999955 ))
     {collision.play();}
-    else if(((x-10)<771.76 &&(y>=147.799999999999955 && y<=537.8 ))){
+    else if(((x-8)<771.76 &&(y>=147.799999999999955 && y<=537.8 ))){
         collision.play(); 
     }
     else{
         del();
         maze();
-        drawpic(x-10,y);
-        x-=10;
+        drawpic(x-8,y);
+        x-=8;
 
     }
 }
