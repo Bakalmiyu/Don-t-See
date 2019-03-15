@@ -8,6 +8,17 @@
     <link rel="stylesheet" type="text/css" href="Main.css">
 </head>
 <body onload="main()">
+	<script type="text/javascript">
+		function showup() {
+			if (document.getElementById('myCanvas').style.display == 'none'){
+				document.getElementById('myCanvas').style.display = 'block';
+			}
+			else {
+				document.getElementById('myCanvas').style.display = 'none';
+			}
+		}
+	</script>
+	<button id = 'display' onclick = 'showup()'>click me!</button>
 <canvas id="myCanvas"></canvas>
 </body>
 </html>
