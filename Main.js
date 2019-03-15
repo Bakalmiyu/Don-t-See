@@ -2,6 +2,7 @@ x = 4.28/8*window.innerWidth
 y = window.innerHeight*2.8/4
 var collision = new Audio('impact.wav');
 var footstep = new Audio('forestwalk.wav');
+var victory = new Audio('victory.flac')
 document.addEventListener("keydown", function(e){//Useing Keyboard to call other function
     if(e.keyCode === 38){//ArrowUp
         footstep.play();
@@ -20,8 +21,8 @@ document.addEventListener("keydown", function(e){//Useing Keyboard to call other
     if(e.keyCode === 37){//ArrowLeft
         footstep.play();
         moveleft();
-
     }
+    
 });
 function drawpic(x,y){
     console.log("X=",x,"Y=",y);
@@ -68,6 +69,7 @@ function moveright(){
     }
     else if(((x+8)>1431.76 &&(y>=37.799999999999955 && y<=137.799999999999955 ))){
         alert("You Won. Play Again?"); 
+        victory.play();
         location.reload();
     }
     else{
@@ -121,6 +123,7 @@ function maze(){
     ctx.fillText("Enter",3.5/8*window.innerWidth,innerHeight-170); ctx.fillText("End",7/8*window.innerWidth+50,1/4*window.innerHeight+100);
     ctx.stroke(); 
 }
+
 function audio(){
     var forest = new Audio('forest.mp3');
     forest.loop = true;
@@ -128,7 +131,7 @@ function audio(){
 }
 
 function main(){//when don't see load use this
-    maze();
+    nomaze();
     drawpic(x,y);
     audio();
 }
