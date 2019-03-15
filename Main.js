@@ -22,7 +22,6 @@ document.addEventListener("keydown", function(e){//Useing Keyboard to call other
         footstep.play();
         moveleft();
     }
-    
 });
 function drawpic(x,y){
     console.log("X=",x,"Y=",y);
@@ -68,8 +67,8 @@ function moveright(){
         collision.play(); 
     }
     else if(((x+8)>1431.76 &&(y>=37.799999999999955 && y<=137.799999999999955 ))){
-        alert("You Won. Play Again?"); 
         victory.play();
+        alert("You Won. Play Again?"); 
         location.reload();
     }
     else{
