@@ -131,8 +131,8 @@ function audio(){
 }
 
 function main(){//when don't see load use this
-    nomaze();
     drawpic(x,y);
+    maze();
     audio();
 }
 
