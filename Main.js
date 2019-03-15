@@ -1,8 +1,11 @@
 x = 4.28/8*window.innerWidth
 y = window.innerHeight*2.8/4
-var collision = new Audio('impact.wav').volume = 1;
-var footstep = new Audio('forestwalk.wav').volume = 1;
-var victory = new Audio('victory.flac').volume = 1;
+var collision = new Audio('impact.wav')
+collision.volume = 1;
+var footstep = new Audio('forestwalk.wav')
+footstep.volume = 1;
+var victory = new Audio('victory.flac')
+victory.volume = 1;
 document.addEventListener("keydown", function(e){//Useing Keyboard to call other function
     if(e.keyCode === 38){//ArrowUp
         footstep.play();
